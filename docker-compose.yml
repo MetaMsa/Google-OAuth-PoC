@@ -8,5 +8,3 @@ services:
       - ./vendor:/var/www/html/vendor
     ports:
       - "8080:80"
-    depends_on:
-      - db
