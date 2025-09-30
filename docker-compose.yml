@@ -1,0 +1,12 @@
+services:
+  php:
+    image: php:8.3-apache
+    container_name: poc-php
+    volumes:
+      - ./src:/var/www/html/src
+      - ./public:/var/www/html/
+      - ./vendor:/var/www/html/vendor
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
